@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_sair_comum"
+        android:orderInCategory="1000"
+        android:title="desconectar"
+        app:showAsAction="collapseActionView"/>
+
+    <item
+        android:id="@+id/action_cardarpio_comun"
+        android:orderInCategory="200"
+        android:title="Cardapio"
+        app:showAsAction="collapseActionView"/>
+
+    <item
+        android:id="@+id/action_fazer_pedidos"
+        android:orderInCategory="100"
+        android:title="add Usuário"
+        app:showAsAction="collapseActionView"/>
+</menu>
