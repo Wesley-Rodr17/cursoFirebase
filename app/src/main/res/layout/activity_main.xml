@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context="com.example.cursofirebase.Activity.MainActivity">
 
 
@@ -20,17 +19,19 @@
             android:layout_margin="16dp">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo">
+
             </ImageView>
 
             <TextView
-                android:text="LOGIN"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:textStyle="bold"
                 android:textSize="25sp"/>
 
@@ -76,9 +77,22 @@
                 android:id="@+id/txtAbreCadastro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="right"
+                android:textStyle="bold"
                 android:layout_marginTop="16dp"
-                android:text="não tem conta? Cadastre-se"
+                android:textSize="26dp"
+                android:text="Não tem conta? Cadastre-se"
+                android:textColor="@color/colorDarken"/>
+
+            <TextView
+                android:id="@+id/txtRecuperarSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textSize="26dp"
+                android:text="Recuperar senha"
                 android:textColor="@color/colorDarken"/>
 
 

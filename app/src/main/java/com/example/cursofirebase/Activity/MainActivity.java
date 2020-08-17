@@ -29,7 +29,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private BootstrapEditText email, senha;
-    private TextView abreCadastro;
+    private TextView abreCadastro, recuperarSenha;
     private BootstrapButton btnLogar;
     private FirebaseAuth autenticacao;
     private Usuario usuario;
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         email = (BootstrapEditText) findViewById(R.id.ideditEmail);
         abreCadastro = (TextView) findViewById(R.id.txtAbreCadastro);
+        recuperarSenha = (TextView) findViewById(R.id.txtRecuperarSenha);
         senha = (BootstrapEditText) findViewById(R.id.ideditSenha);
         btnLogar = (BootstrapButton) findViewById(R.id.idbtnLogin);
 
@@ -66,6 +67,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         abreCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CadastroUsuarioComumActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        recuperarSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CadastroUsuarioComumActivity.class);

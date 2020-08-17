@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RecuperarSenha">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:background="@drawable/esqueciminhasenha" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ESQUECEU SUA SENHA?"
+                android:gravity="center"
+                android:layout_margin="16dp"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                app:fontFamily="sans-serif-black"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="221dp"
+                android:layout_height="70dp"
+                android:text="Insira o endereço de e-mail associado à sua conta."
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/idEmailRecuperar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bootstrapSize="xl"
+                android:hint="Email:"
+                app:helperText="* Preenchimento Obrigatório"
+                android:inputType="textEmailAddress"
+                >
+
+
+            </com.beardedhen.androidbootstrap.BootstrapEditText>
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btnrecuperarsenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:text="Enviar"
+                android:padding="12dp"
+                android:shadowRadius="90"
+                android:textColor="#ffffff"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="xl"
+              />
+        </LinearLayout>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
