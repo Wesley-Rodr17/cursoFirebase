@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,7 +37,7 @@ public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) { //cardapio são todos os objetos
         Cardapio itemCardapio = cardapio.get( position );             // itemcardapio é um item do objeto cardapio
-        holder.imagem.setText( itemCardapio.getUrlImagem());
+        //holder.imagem.setImageAlpha( itemCardapio.getUrlImagem());
         holder.nome.setText( itemCardapio.getNomePrato());
         holder.descricao.setText("Descrição: " +  itemCardapio.getDescricao());
         holder.preco.setText("RS: " +  itemCardapio.getPreco());
@@ -49,7 +50,8 @@ public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.MyView
     }
 
     public class MyViewHolder extends  RecyclerView.ViewHolder{
-        TextView imagem, nome, descricao, preco, serve;
+        TextView  nome, descricao, preco, serve;
+        ImageView imagem;
 
         public MyViewHolder( View itemView ){
             super(itemView);

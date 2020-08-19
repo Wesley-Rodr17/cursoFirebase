@@ -9,12 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.RecuperarSenha"></activity>
-        <activity android:name=".Activity.CardapioActivity" />
-        <activity android:name=".Activity.CadastroUsuarioComumActivity" />
-        <activity android:name=".Activity.PrincipalActivity" />
-        <activity android:name=".Activity.CadastroUsuarioActivity" />
-        <activity android:name=".Activity.MainActivity">
+        <activity android:label="Recuperar senha"
+            android:name=".Activity.RecuperarSenha"
+            android:parentActivityName=".Activity.MainActivity"
+            ></activity>
+
+        <activity  android:label="Cardápio"
+            android:name=".Activity.CardapioActivity"
+            android:parentActivityName=".Activity.PrincipalActivity"/>
+
+        <activity android:label="Cadastro Usuário"
+            android:name=".Activity.CadastroUsuarioComumActivity"
+            android:parentActivityName=".Activity.MainActivity"/>
+
+        <activity android:name=".Activity.PrincipalActivity"
+            android:label="Home"/>
+
+        <activity android:label="Cadastro Usuário"
+            android:name=".Activity.CadastroUsuarioActivity"
+            android:parentActivityName=".Activity.PrincipalActivity"/>
+
+        <activity
+            android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

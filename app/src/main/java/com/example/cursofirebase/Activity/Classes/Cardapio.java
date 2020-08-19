@@ -11,6 +11,9 @@ public class Cardapio implements Parcelable {
     private String urlImagem;
     private String preco;
 
+    public Cardapio() {
+    }
+
     protected Cardapio(Parcel in) {
         keyProduto = in.readString();
         nomePrato = in.readString();

@@ -104,6 +104,8 @@ public class PrincipalActivity extends AppCompatActivity {
     }
 
     private void verCardapio() {
+        Intent intent = new Intent(PrincipalActivity.this, CardapioActivity.class);
+        startActivity(intent);
     }
 
     private void abrirTelaCadastroUsuario(){

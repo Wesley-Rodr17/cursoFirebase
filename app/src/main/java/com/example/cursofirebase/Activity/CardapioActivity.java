@@ -54,7 +54,7 @@ public class CardapioActivity extends AppCompatActivity {
         recyclerViewListaCardapio.setAdapter(cardapioAdapter);
 
         databaseCardapio = ConfiguracaoFirebase.getFirebase()
-                .child("Colaboradores");
+                .child("cardapios");
 
 
         valueEventListener = new ValueEventListener() {

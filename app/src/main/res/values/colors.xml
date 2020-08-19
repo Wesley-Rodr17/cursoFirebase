@@ -5,4 +5,11 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorDarken">#212121</color>
+
+    <color name="confirmar">#43A047</color>
+    <color name="editar">#f9a825</color>
+    <color name="excluir">#c62828</color>
+    <color name="adicionar">#0277bd</color>
+    <color name="colorGray">#b0bec5</color>
+
 </resources>
