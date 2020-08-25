@@ -4,14 +4,14 @@ import android.content.Intent;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.beardedhen.androidbootstrap.BootstrapButton;
-import com.beardedhen.androidbootstrap.BootstrapEditText;
 import com.example.cursofirebase.Activity.Classes.Usuario;
 import com.example.cursofirebase.Activity.DAO.ConfiguracaoFirebase;
 import com.example.cursofirebase.Activity.Helper.Preferencias;
@@ -27,9 +27,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
-    private BootstrapEditText nome, email, senha, confSenha;
+    private EditText nome, email, senha, confSenha;
     private RadioButton permissaoAdm, permissaoAtend;
-    private BootstrapButton btnCadastrar, btnCancelar;
+    private Button btnCadastrar, btnCancelar;
     private Usuario usuario;
     private FirebaseAuth autenticacao;
 
@@ -38,14 +38,14 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_usuario);
 
-        nome = (BootstrapEditText) findViewById(R.id.ideditNome);
-        email = (BootstrapEditText) findViewById(R.id.ideditEmail);
-        senha = (BootstrapEditText) findViewById(R.id.ideditSenha);
-        confSenha = (BootstrapEditText) findViewById(R.id.ideditComSenha);
+        nome =  findViewById(R.id.ideditNome);
+        email =  findViewById(R.id.ideditEmail);
+        senha =  findViewById(R.id.ideditSenha);
+        confSenha =  findViewById(R.id.ideditComSenha);
         permissaoAdm = (RadioButton) findViewById(R.id.idrbAdmin);
         permissaoAtend = (RadioButton) findViewById(R.id.idrbAtend);
-        btnCadastrar = (BootstrapButton) findViewById(R.id.idbtnCadastrar);
-        btnCancelar = (BootstrapButton) findViewById(R.id.idbtnCancelar);
+        btnCadastrar = (Button) findViewById(R.id.idbtnCadastrar);
+        btnCancelar = (Button) findViewById(R.id.idbtnCancelar);
 
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override

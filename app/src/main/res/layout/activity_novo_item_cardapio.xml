@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context=".Activity.NovoItemCardapioActivity">
+
+
+    <ImageView
+        android:id="@+id/idAdicionarImagem"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/idNomePrato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Prato"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        />
+
+    <EditText
+        android:id="@+id/idDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrição"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+        />
+    <EditText
+        android:id="@+id/idserve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Serve"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+
+        />
+
+    <EditText
+        android:id="@+id/idpreco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Preço"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        />
+
+    <button
+        android:id="@+id/idbtnCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:background="@color/excluir"
+
+        android:layout_marginTop="16dp"
+        android:padding="13dp"
+        />
+
+    <button
+        android:id="@+id/idbtnCancelar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Cancelar"
+        android:text="Cancelar"
+        android:background="@color/excluir"
+        android:padding="13dp"
+        />
+
+</LinearLayout>

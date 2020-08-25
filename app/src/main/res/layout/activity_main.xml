@@ -35,42 +35,31 @@
                 android:textStyle="bold"
                 android:textSize="25sp"/>
 
-            <com.beardedhen.androidbootstrap.BootstrapEditText
+            <EditText
                 android:id="@+id/ideditEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="E-mail"
                 android:layout_marginTop="16dp"
                 android:inputType="textEmailAddress"
-                app:bootstrapSize="xl"
-                app:bootstrapBrand="info"
-                app:roundedCorners="true"
                 />
 
 
-            <com.beardedhen.androidbootstrap.BootstrapEditText
+            <EditText
                 android:id="@+id/ideditSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Senha"
                 android:layout_marginTop="16dp"
                 android:inputType="textPassword"
-                app:bootstrapSize="xl"
-                app:bootstrapBrand="info"
-                app:roundedCorners="true"
                 />
 
-            <com.beardedhen.androidbootstrap.BootstrapButton
+            <Button
                 android:id="@+id/idbtnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:layout_marginTop="16dp"
-                app:bootstrapBrand="success"
-                app:bootstrapSize="xl"
-                app:buttonMode="regular"
-                app:showOutline="false"
-                app:roundedCorners="true"
                 />
 
             <TextView

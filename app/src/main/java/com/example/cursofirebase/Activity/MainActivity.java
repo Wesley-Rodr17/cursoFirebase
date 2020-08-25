@@ -14,8 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.beardedhen.androidbootstrap.BootstrapButton;
-import com.beardedhen.androidbootstrap.BootstrapEditText;
+
 import com.example.cursofirebase.Activity.Classes.Usuario;
 import com.example.cursofirebase.Activity.DAO.ConfiguracaoFirebase;
 import com.example.cursofirebase.Activity.Helper.Preferencias;
@@ -28,9 +27,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private BootstrapEditText email, senha;
+    private EditText email, senha;
     private TextView abreCadastro, recuperarSenha;
-    private BootstrapButton btnLogar;
+    private Button btnLogar;
     private FirebaseAuth autenticacao;
     private Usuario usuario;
 
@@ -39,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        email = (BootstrapEditText) findViewById(R.id.ideditEmail);
+        email =  findViewById(R.id.ideditEmail);
         abreCadastro = (TextView) findViewById(R.id.txtAbreCadastro);
         recuperarSenha = (TextView) findViewById(R.id.txtRecuperarSenha);
-        senha = (BootstrapEditText) findViewById(R.id.ideditSenha);
-        btnLogar = (BootstrapButton) findViewById(R.id.idbtnLogin);
+        senha =  findViewById(R.id.ideditSenha);
+        btnLogar = (Button) findViewById(R.id.idbtnLogin);
 
         permission();
 
@@ -55,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if(!email.getText().toString().equals("") && !senha.getText().toString().equals("")) {
+                        usuario = new Usuario();
                         usuario.setEmail(email.getText().toString());
                         usuario.setSenha(senha.getText().toString());
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void validarLogin(){
         autenticacao = ConfiguracaoFirebase.getAutenticacao();
-        autenticacao.signInWithEmailAndPassword(usuario.getEmail().toString(), usuario.getSenha().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        autenticacao.signInWithEmailAndPassword(usuario.getEmail(), usuario.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful() ){

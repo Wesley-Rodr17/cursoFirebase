@@ -3,14 +3,15 @@ package com.example.cursofirebase.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.beardedhen.androidbootstrap.BootstrapButton;
-import com.beardedhen.androidbootstrap.BootstrapEditText;
+
 import com.example.cursofirebase.Activity.Classes.Usuario;
 import com.example.cursofirebase.Activity.DAO.ConfiguracaoFirebase;
 import com.example.cursofirebase.Activity.Helper.Preferencias;
@@ -28,9 +29,9 @@ import com.google.firebase.database.FirebaseDatabase;
 public class CadastroUsuarioComumActivity extends AppCompatActivity {
 
 
-    private BootstrapEditText nome, email, senha, confSenha, cpf, rua, numero;
+    private EditText nome, email, senha, confSenha, cpf, rua, numero;
     private RadioButton sexoFeminino, sexoMasculino;
-    private BootstrapButton btnCadastrar, btnCancelar;
+    private Button btnCadastrar, btnCancelar;
     private Usuario usuario;
     private FirebaseAuth autenticacao;
 
@@ -39,17 +40,17 @@ public class CadastroUsuarioComumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_usuario_comum);
 
-        nome = (BootstrapEditText) findViewById(R.id.idNome);
-        cpf = (BootstrapEditText) findViewById(R.id.idCPF);
-        rua = (BootstrapEditText) findViewById(R.id.idRua);
-        numero = (BootstrapEditText) findViewById(R.id.idNumero);
-        email = (BootstrapEditText) findViewById(R.id.idEmail);
-        senha = (BootstrapEditText) findViewById(R.id.idSenha);
-        confSenha = (BootstrapEditText) findViewById(R.id.idComSenha);
+        nome =  findViewById(R.id.idNome);
+        cpf =  findViewById(R.id.idCPF);
+        rua =  findViewById(R.id.idRua);
+        numero =  findViewById(R.id.idNumero);
+        email =  findViewById(R.id.idEmail);
+        senha =  findViewById(R.id.idSenha);
+        confSenha =  findViewById(R.id.idComSenha);
         sexoFeminino = (RadioButton) findViewById(R.id.idrbFem);
         sexoMasculino = (RadioButton) findViewById(R.id.idrbMas);
-        btnCadastrar = (BootstrapButton) findViewById(R.id.idbtnCadastrarUsuarioC);
-        btnCancelar = (BootstrapButton) findViewById(R.id.idbtnCancelarUsuarioC);
+        btnCadastrar =  findViewById(R.id.idbtnCadastrarUsuarioC);
+        btnCancelar =  findViewById(R.id.idbtnCancelarUsuarioC);
 
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override

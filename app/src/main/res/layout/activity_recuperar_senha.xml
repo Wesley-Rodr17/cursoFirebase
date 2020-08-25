@@ -41,20 +41,19 @@
                 android:textColor="#000000"
                 android:textSize="17dp" />
 
-            <com.beardedhen.androidbootstrap.BootstrapEditText
+            <EditText
                 android:id="@+id/idEmailRecuperar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:bootstrapSize="xl"
                 android:hint="Email:"
                 app:helperText="* Preenchimento Obrigatório"
                 android:inputType="textEmailAddress"
                 >
 
 
-            </com.beardedhen.androidbootstrap.BootstrapEditText>
+            </EditText>
 
-            <com.beardedhen.androidbootstrap.BootstrapButton
+            <Button
                 android:id="@+id/btnrecuperarsenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,8 +63,7 @@
                 android:padding="12dp"
                 android:shadowRadius="90"
                 android:textColor="#ffffff"
-                app:bootstrapBrand="success"
-                app:bootstrapSize="xl"
+
               />
         </LinearLayout>
     </ScrollView>

@@ -16,6 +16,7 @@ import com.example.cursofirebase.Activity.Classes.Cardapio;
 import com.example.cursofirebase.Activity.DAO.ConfiguracaoFirebase;
 import com.example.cursofirebase.Activity.Helper.RecyclerItemClickListener;
 import com.example.cursofirebase.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,18 +29,30 @@ import java.util.List;
 public class CardapioActivity extends AppCompatActivity {
 
     private TextView tituloTxt;
-    private Button btnCadastrarNovoColaborador;
     private RecyclerView recyclerViewListaCardapio;
     private ValueEventListener valueEventListener;
     private CardapioAdapter cardapioAdapter;
     private List<Cardapio> mCardapioList  = new ArrayList<Cardapio>();
     private DatabaseReference databaseCardapio;
     Cardapio cardapio;
+    FloatingActionButton btnCadastrarNovoItemCardapio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cardapio);
+
+        btnCadastrarNovoItemCardapio = findViewById(R.id.idAdicionar);
+
+
+        btnCadastrarNovoItemCardapio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), NovoItemCardapioActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         //configurações iniciais
         recyclerViewListaCardapio = (RecyclerView) findViewById(R.id.idRecycleViewTodosProdutos);

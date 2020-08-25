@@ -27,11 +27,8 @@
         android:layout_margin="16dp"
         android:layout_gravity="bottom|right"
         android:contentDescription="Download"
-        android:background="@color/adicionar"
-        android:text="Download"
-        android:textColor="#ffffff"
-        app:iconTint="#ffffff"
-
-        android:textColorHint="@color/adicionar"/>
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabSize="normal"
+        app:backgroundTint="@color/adicionar"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
